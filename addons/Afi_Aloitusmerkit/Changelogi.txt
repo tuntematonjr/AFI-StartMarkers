@@ -1,0 +1,5 @@
+19.12.2017
+-Lisätty ominaisuus lisätä ylimääräisiä tunnisteita johtoryhmille. (Kätevä eventeissä)
+18.12.2017
+-Korjattu typo
+-Korjattu "purkalla" tupla merkit.
