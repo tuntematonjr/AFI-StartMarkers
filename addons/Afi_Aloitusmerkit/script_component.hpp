@@ -1,5 +1,5 @@
 #define COMPONENT Aloitusmerkit
-#define PREFIX Afi
+#define PREFIX Afi_StartMarkers
 
 #define MAJOR 3
 #define MINOR 5
