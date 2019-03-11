@@ -1,5 +1,5 @@
 name = "AFI Starting Position Markers";
-//picture = "task_force_arrowhead_logo.paa";
+picture = "Data\afilogo.paa";
 actionName = "Community Website";
 action = "https://armafinland.fi/";
 description = "Create starting position markers for squads, vehicles and other stuff like ammo boxes for specifig side";
