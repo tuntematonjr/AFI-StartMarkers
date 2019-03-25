@@ -19,47 +19,47 @@
  */
 #include "script_component.hpp"
 
+
+private _global = false;
+if (isServer) then {
+	_global = true;
+};
+
 {
 	private _vehicle = _x;
 
-	ok = ( _vehicle getVariable [QGVAR(vehilce_side),sideLogic]);
-	ok1 = (_vehicle getVariable ["AFI_vehicle_gear",""]);
-	ok2 = ((_vehicle getVariable ["AFI_vehicle_gear",""] == "") && _vehicle getVariable [QGVAR(vehilce_side),sideLogic] == sideLogic);
-
-
-	if ((_vehicle getVariable ["AFI_vehicle_gear",""] == "") && _vehicle getVariable [QGVAR(vehilce_side),sideLogic] == sideLogic) exitWith { };
+	if ((_vehicle getVariable ["AFI_vehicle_gear",""] == "") && _vehicle getVariable [QGVAR(vehilce_side),sideLogic] == sideLogic && _vehicle getVariable QGVAR(enable_marker)) exitWith { };
 
 	_position = getpos _vehicle;
 	_direction = getDir _vehicle;
-	_vehicle setVariable [QGVAR(marker_data), [_position,_direction], true];
+	_vehicle setVariable [QGVAR(marker_data), [_position,_direction], _global];
+	if (isServer) then {
+		if !(_vehicle getVariable ["AFI_vehicle_gear",""] == "") then {
+			///check that is importat type
+			if (_vehicle isKindof "LandVehicle" || _vehicle isKindOf "Static" || _vehicle isKindOf "thing" || _vehicle isKindof "Air" || _vehicle isKindOf "Ship" ) then {
+			    _sideSTR = _vehicle getVariable "AFI_vehicle_gear";
+			    switch (toLower _sideSTR) do {
+			        case "west": {
+			        	_vehicle setVariable [QGVAR(vehilce_side), west, true];
+			        };
 
-	if !(_vehicle getVariable ["AFI_vehicle_gear",""] == "") then {
-		///check that is importat type
-		if (_vehicle isKindof "LandVehicle" || _vehicle isKindOf "Static" || _vehicle isKindOf "thing" || _vehicle isKindof "Air" || _vehicle isKindOf "Ship" ) then {
-		    _sideSTR = _vehicle getVariable "AFI_vehicle_gear";
-		    switch (toLower _sideSTR) do {
-		        case "west": {
-		        	_vehicle setVariable [QGVAR(vehilce_side), west, true];
-		        };
+			        case "east": {
+			        	_vehicle setVariable [QGVAR(vehilce_side), east, true];
+			        };
 
-		        case "east": {
-		        	_vehicle setVariable [QGVAR(vehilce_side), east, true];
-		        };
+			        case "guer": {
+			        	_vehicle setVariable [QGVAR(vehilce_side), resistance, true];
+			        };
 
-		        case "guer": {
-		        	_vehicle setVariable [QGVAR(vehilce_side), resistance, true];
-		        };
+			        case "civ": {
+			        	_vehicle setVariable [QGVAR(vehilce_side), civilian, true];
+			        };
 
-		        case "civ": {
-		        	_vehicle setVariable [QGVAR(vehilce_side), civilian, true];
-		        };
+			        default {
 
-		        default {
-
-		        };
-		    };
-		    //Convert afi standards to this
-
+			        };
+			    };
+			};
 		};
 	};
 } forEach vehicles;

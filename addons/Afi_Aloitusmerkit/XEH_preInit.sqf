@@ -22,6 +22,7 @@ PREP(diary_GroupMarkerStatus);
 PREP(diary_VehicleMarkerStatus);
 PREP(BFT);
 
+
 //Set variables base values
 ISNILS(GVAR(showFriendlyMarkers),true);
 ISNILS(GVAR(INF_Markers),[]);

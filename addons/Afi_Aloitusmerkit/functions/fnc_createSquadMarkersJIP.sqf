@@ -15,15 +15,19 @@
  */
 #include "script_component.hpp"
 
-ISNILS(GVAR(showFriendlyMarkers),true);
-ISNILS(GVAR(INF_Markers),[]);
+
 private _groupsToCreateMarkers = [];
 
+//Delete old markers
+{
+	deleteMarkerLocal _x;
+} forEach GVAR(INF_Markers);
+GVAR(INF_Markers) = [];
 
 if (GVAR(showFriendlyMarkers) && {playerSide != civilian}) then {
-	_groupsToCreateMarkers = allGroups select {[side _x, playerSide] call BIS_fnc_sideIsFriendly && {(side _x != civilian)} && {count (_x getVariable QGVAR(marker_data)) > 0}};
+	_groupsToCreateMarkers = allGroups select {[side _x, playerSide] call BIS_fnc_sideIsFriendly && {(side _x != civilian)} && {count (_x getVariable QGVAR(marker_data)) > 0} && { _x getVariable [QGVAR(enable_marker), true] } };
 } else {
-	_groupsToCreateMarkers = allGroups select { side _x == playerSide && { count (_x getVariable QGVAR(marker_data)) > 0} };
+	_groupsToCreateMarkers = allGroups select { side _x == playerSide && { count (_x getVariable QGVAR(marker_data)) > 0} && { _x getVariable [QGVAR(enable_marker), true] } };
 };
 
 {

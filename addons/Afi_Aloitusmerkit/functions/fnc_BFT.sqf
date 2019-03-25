@@ -24,19 +24,27 @@
 
 [{
 	if ("ItemGPS" in assignedItems player || "ACE_microDAGR" in items player) then {
-		[_handle] call CBA_fnc_removePerFrameHandler;
+		//[_handle] call CBA_fnc_removePerFrameHandler;
 		GVAR(marker_alpha) = 1;
-		[] call FUNC(createSquadMarkers);
-		[] call FUNC(createVehicleMarkers);
+
+		if (GVAR(group_marker_status)) exitWith {
+			[] call FUNC(createSquadMarkersBFT);
+		};
+
+		if (GVAR(vehicle_marker_status)) exitWith {
+			[] call FUNC(createVehicleMarkers);
+		};
 
 		//update marker data
-		[] call FUNC(createVehicleMarkers);
-		[] call FUNC(createVehicleMarkers);
+		[] call FUNC(squadData);
+		[] call FUNC(vehicleData);
 	} else {
-		GVAR(marker_alpha) = 0.5;
+		if !(GVAR(marker_alpha) == 0.5) then {
+			GVAR(marker_alpha) = 0.5;
+			[] call FUNC(createSquadMarkersJIP);
+			[] call FUNC(createVehicleMarkersJIP);
+		};
 	};
-
-
 }, GVAR(BFT_update_interval)] call CBA_fnc_addPerFrameHandler;
 
 

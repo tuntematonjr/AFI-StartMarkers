@@ -42,12 +42,12 @@ if (count GVAR(VEHICLE_Markers) > 0) then {
         private _side = _vehicle getVariable QGVAR(vehilce_side);
 
         ///Show allied vehicles if needed
-        if (GVAR(showFriendlyMarkers) && {playerSide != civilian} && _side != civilian) then {
+        if (GVAR(showFriendlyMarkers) && {playerSide != civilian} && {_side != civilian} && {_vehicle getVariable [QGVAR(enable_marker), true]}) then {
             if ([_side, playerSide] call BIS_fnc_sideIsFriendly) then {
                _vehiclesToCreateMarkers pushBack _vehicle;
             };
         } else {
-            if (playerSide == _side) then {
+            if (playerSide == _side && {_vehicle getVariable [QGVAR(enable_marker), true]}) then {
                 _vehiclesToCreateMarkers pushBack _vehicle;
             };
         };
