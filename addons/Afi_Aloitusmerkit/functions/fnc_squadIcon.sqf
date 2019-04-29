@@ -1,5 +1,5 @@
 ﻿/*
- * Author: KoffeinFlummi
+ * Author: KoffeinFlummi. Modified by Tuntematon
  * Get the apropriate marker for a group.
  * Loaned from ace. https://github.com/acemod/ACE3/blob/master/addons/common/functions/fnc_getMarkerType.sqf
  * all credits for orignal author and ACE team.
