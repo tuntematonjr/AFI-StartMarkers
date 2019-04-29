@@ -2,6 +2,8 @@
  * Author: KoffeinFlummi
  * Get the apropriate marker for a group.
  * Loaned from ace. https://github.com/acemod/ACE3/blob/master/addons/common/functions/fnc_getMarkerType.sqf
+ * all credits for orignal author and ACE team.
+ *
  * Arguments:
  * 0: Group <GROUP>
  *
@@ -74,7 +76,7 @@ if (_vehicle isKindOf "Car") exitWith {
 };
 
 if (_vehicle isKindOf "Tank") exitWith {
-    if (getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "transportSoldier") > 0) then {
+    if (getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> "transportSoldier") > 0 && (count units _group) > 4) then {
         ["n_mech_inf", "b_mech_inf", "o_mech_inf"] select ((["GUER", "WEST", "EAST"] find str _side) max 0)
     } else {
         ["n_armor", "b_armor", "o_armor"] select ((["GUER", "WEST", "EAST"] find str _side) max 0)

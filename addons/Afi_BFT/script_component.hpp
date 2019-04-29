@@ -1,10 +1,10 @@
-#define COMPONENT startmarkers
+#define COMPONENT bft
 #define PREFIX afi
 
 #define MAJOR 1
 #define MINOR 0
 #define PATCHLVL 0
-#define BUILD 290419
+#define BUILD 19122017
 
 #define VERSION MAJOR.MINOR.PATCHLVL.BUILD
 #define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD

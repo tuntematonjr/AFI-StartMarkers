@@ -22,7 +22,7 @@ GVAR(group_marker_status) = _status;
 _value = 0;
 
 if (_status) then {
-	_value = GVAR(marker_alpha);
+	_value = 1;
 };
 
 

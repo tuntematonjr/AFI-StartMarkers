@@ -1,8 +1,8 @@
 ﻿/*
  * Author: [Tuntematon]
  * [Description]
+ * Create Squad markers
  *
- * Arguments:
  * Arguments:
  * None
  *
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * []  call afi_startmarkers_fnc_createSquadMarkers
+ * [] call afi_startmarkers_fnc_createSquadMarkers
  *
  * Public: [No]
  */
@@ -19,13 +19,6 @@
 //if !(GVAR(group_marker_status)) exitWith { };
 
 private _groupsToCreateMarkers = [];
-
-//Delete old markers
-{
-	deleteMarkerLocal _x;
-} forEach GVAR(INF_Markers);
-GVAR(INF_Markers) = [];
-
 
 if (GVAR(showFriendlyMarkers) && {playerSide != civilian}) then {
 	_groupsToCreateMarkers = allGroups select {[side _x, playerSide] call BIS_fnc_sideIsFriendly && { (side _x != civilian) } && {_x getVariable [QGVAR(enable_marker), true]} };
@@ -36,7 +29,7 @@ if (GVAR(showFriendlyMarkers) && {playerSide != civilian}) then {
 {
 	_group = _x;
 	_group_side = side _group;
-	_group_icon = [_group] call afi_startmarkers_fnc_squadIcon;
+	_group_icon = [_group] call FUNC(squadIcon);
 	_position = getPos leader _group;
 	_text = groupId _group;
 	_side = side leader _group;

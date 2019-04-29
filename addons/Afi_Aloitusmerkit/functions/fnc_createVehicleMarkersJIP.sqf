@@ -32,7 +32,6 @@ if (count GVAR(VEHICLE_Markers) > 0) then {
 };
 
 
-
 //Collect vehicles
 {
     private _vehicle = _x;

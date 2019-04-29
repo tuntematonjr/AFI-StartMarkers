@@ -14,18 +14,8 @@
  * The return value <BOOL>
  *
  * Example:
- * ["something", player] call afi_startmarkers_fnc_diary_VehicleMarkerTextStatus
+ * ["something", player] call afi_bft_fnc_imanexample
  *
  * Public: [Yes/No]
  */
 #include "script_component.hpp"
-params ["_status"];
-if (str GVAR(vehicle_marker_text_status) == str _status) exitWith {};
-
-GVAR(vehicle_marker_text_status) = _status;
-
-if (time == 0) then {
-	[] call FUNC(createVehicleMarkers)
-} else {
-	[] call FUNC(createVehicleMarkersJIP)
-};

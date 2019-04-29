@@ -18,19 +18,15 @@
  * Public: [Yes/No]
  */
 #include "script_component.hpp"
-private _global = false;
-if (isServer) then {
-	_global = true;
-};
 
 {
     _group = _x;
     _group_side = side _group;
-    _group_icon = [_group] call afi_startmarkers_fnc_squadIcon;
+    _group_icon = [_group] call FUNC(squadIcon);
     _position = getPos leader _group;
     _text = groupId _group;
     _color = [_group_side,  true] call BIS_fnc_sideColor;
 
-    _group setVariable [QGVAR(marker_data),[_position, _group_icon], _global]
+    _group setVariable [QGVAR(marker_data),[_position, _group_icon], true]
 
 } forEach allGroups;

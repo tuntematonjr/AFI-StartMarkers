@@ -20,14 +20,10 @@ if (str GVAR(vehicle_marker_status) == str _status) exitWith {};
 GVAR(vehicle_marker_status) = _status;
 
 if (_status) then {
-	if (GVAR(BFT)) then {
-		 /* Your code */
+	if (time == 0) then {
+		[] call FUNC(createVehicleMarkers)
 	} else {
-		if (time == 0) then {
-			[] call FUNC(createVehicleMarkers)
-		} else {
-			[] call FUNC(createVehicleMarkersJIP)
-		};
+		[] call FUNC(createVehicleMarkersJIP)
 	};
 } else {
 	{

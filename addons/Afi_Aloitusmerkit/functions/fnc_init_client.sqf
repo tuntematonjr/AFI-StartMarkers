@@ -32,10 +32,3 @@
 		[] call FUNC(createSquadMarkers);
 	};
 }] call CBA_fnc_waitUntilAndExecute;
-
-
-if (GVAR(BFT)) then {
-	[{time > 0}, {
-		[] call FUNC(BFT);
-	}] call CBA_fnc_waitUntilAndExecute;
-};

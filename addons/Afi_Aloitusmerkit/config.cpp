@@ -38,15 +38,15 @@ class Cfg3DEN
             // Category class, can be anything
             class afi_startmarkers
             {
-                displayName = "AFI Start position markers & BFT"; // Category name visible in Edit Attributes window
+                displayName = "AFI Start position markers"; // Category name visible in Edit Attributes window
                 collapsed = 1; // When 1, the category is collapsed by default
                 class Attributes
                 {
 
                     class afi_startmarkers_enable_marker_inf
                     {
-                        displayName = "Enable startpos marker";
-                        tooltip = "Create startpos and BFT markers";
+                        displayName = "Enable startpos marker and BFT for this unit";
+                        tooltip = "Create startpos marker and BFT for this unit";
                         property = "afi_startmarkers_enable_marker_inf";
                         control = "Checkbox";
                         expression = "_this setVariable ['afi_startmarkers_enable_marker', _value, true];";
@@ -57,8 +57,6 @@ class Cfg3DEN
 
                     class afi_startmarkers_enable_marker_vehicle: afi_startmarkers_enable_marker_inf
                     {
-                        displayName = "Enable startpos marker";
-                        tooltip = "Create startpos and BFT markers";
                         property = "afi_startmarkers_enable_marker_vehicle";
                         expression = "_this setVariable ['afi_startmarkers_enable_marker', _value, true];";
                         condition =  "objectHasInventoryCargo + objectVehicle";

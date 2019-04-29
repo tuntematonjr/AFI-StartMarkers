@@ -2,11 +2,12 @@
  * Author: [Tuntematon]
  * [Description]
  * Create markers for JIP
+ *
  * Arguments:
  * None
  *
  * Return Value:
- * The return value <BOOL>
+ * None
  *
  * Example:
  * [] call afi_startmarkers_fnc_createSquadMarkersJIP
@@ -18,11 +19,6 @@
 
 private _groupsToCreateMarkers = [];
 
-//Delete old markers
-{
-	deleteMarkerLocal _x;
-} forEach GVAR(INF_Markers);
-GVAR(INF_Markers) = [];
 
 if (GVAR(showFriendlyMarkers) && {playerSide != civilian}) then {
 	_groupsToCreateMarkers = allGroups select {[side _x, playerSide] call BIS_fnc_sideIsFriendly && {(side _x != civilian)} && {count (_x getVariable QGVAR(marker_data)) > 0} && { _x getVariable [QGVAR(enable_marker), true] } };
