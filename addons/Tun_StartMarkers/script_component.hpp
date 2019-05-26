@@ -1,5 +1,5 @@
 #define COMPONENT startmarkers
-#define PREFIX afi
+#define PREFIX tun
 
 #define MAJOR 1
 #define MINOR 0

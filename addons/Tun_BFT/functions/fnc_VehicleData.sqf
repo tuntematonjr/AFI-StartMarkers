@@ -23,7 +23,7 @@
 
 params ["_vehicle"];
 
-if ((_vehicle getVariable ["Tun_vehicle_gear",""] == "") && _vehicle getVariable ["Tun_startmarkers_vehilce_side",sideLogic] == sideLogic && _vehicle getVariable [QGVAR(Tun_bft_disabled_unit), false] && count (crew _vehicle) == 0) exitWith { };
+if ((_vehicle getVariable ["afi_vehicle_gear",""] == "") && _vehicle getVariable ["Tun_startmarkers_vehilce_side",sideLogic] == sideLogic && _vehicle getVariable [QGVAR(Tun_bft_disabled_unit), false] && count (crew _vehicle) == 0) exitWith { };
 
 _position = getpos _vehicle;
 _direction = getDir _vehicle;

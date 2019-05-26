@@ -23,7 +23,7 @@
 {
 	private _vehicle = _x;
 
-	if ((_vehicle getVariable ["Tun_vehicle_gear",""] == "") && _vehicle getVariable [QGVAR(vehilce_side),sideLogic] == sideLogic && _vehicle getVariable QGVAR(enable_marker)) exitWith { };
+	if ((_vehicle getVariable ["afi_vehicle_gear",""] == "") && _vehicle getVariable [QGVAR(vehilce_side),sideLogic] == sideLogic && _vehicle getVariable QGVAR(enable_marker)) exitWith { };
 
 	_position = getpos _vehicle;
 	_direction = getDir _vehicle;

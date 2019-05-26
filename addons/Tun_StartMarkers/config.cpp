@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-    class Tun_Aloitusmerkit
+    class tun_startmarkers
     {
         units[] = {};
         weapons[] = {};
@@ -44,8 +44,8 @@ class Cfg3DEN
 
                     class Tun_startmarkers_enable_marker_inf
                     {
-                        displayName = "Enable startpos marker and BFT for this unit";
-                        tooltip = "Create startpos marker and BFT for this unit";
+                        displayName = "Enable startpos and BFT";
+                        tooltip = "Enables startpos marker and BFT for this unit";
                         property = "Tun_startmarkers_enable_marker_inf";
                         control = "Checkbox";
                         expression = "_this setVariable ['Tun_startmarkers_enable_marker', _value, true];";

@@ -7,7 +7,7 @@ class CfgPatches
         units[] = {};
         weapons[] = {};
         requiredVersion = 1.5;
-        requiredAddons[] = {"cba_main","Tun_Starmarkers"};
+        requiredAddons[] = {"cba_main","tun_startmarkers"};
         author[] = {"Tuntematon"};
         authorUrl = "https://armafinland.fi/";
     };

@@ -1,4 +1,4 @@
-name = "AFI Starting Position Markers";
+name = "TUN Starting Position Markers";
 picture = "Data\afilogo.paa";
 actionName = "Community Website";
 action = "https://armafinland.fi/";
