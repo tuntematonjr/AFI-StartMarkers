@@ -2,25 +2,25 @@
 
 class CfgPatches
 {
-    class Afi_BFT
+    class Tun_BFT
     {
         units[] = {};
         weapons[] = {};
         requiredVersion = 1.5;
-        requiredAddons[] = {"cba_main","Afi_Aloitusmerkit"};
+        requiredAddons[] = {"cba_main","Tun_Starmarkers"};
         author[] = {"Tuntematon"};
         authorUrl = "https://armafinland.fi/";
     };
 };
 
 class Extended_PostInit_EventHandlers {
-    class Afi_BFT {
+    class Tun_BFT {
         init = QUOTE(call COMPILE_FILE(XEH_postInit));
     };
 };
 
 class Extended_PreInit_EventHandlers {
-    class Afi_BFT {
+    class Tun_BFT {
         init = QUOTE( call COMPILE_FILE(XEH_preInit) );
     };
 };
@@ -37,29 +37,29 @@ class Cfg3DEN
         class AttributeCategories
         {
             // Category class, can be anything
-            class afi_bft
+            class Tun_bft
             {
-                displayName = "AFI BFT"; // Category name visible in Edit Attributes window
+                displayName = "Tun BFT"; // Category name visible in Edit Attributes window
                 collapsed = 1; // When 1, the category is collapsed by default
                 class Attributes
                 {
 
-                    class afi_bft_disabled_unit
+                    class Tun_bft_disabled_unit
                     {
                         displayName = "Disable BFT marker";
                         tooltip = "Disable BFT marker for this unit";
-                        property = "afi_bft_disabled_unit";
+                        property = "Tun_bft_disabled_unit";
                         control = "Checkbox";
-                        expression = "_this setVariable ['afi_bft_disabled_unit', _value, true];";
+                        expression = "_this setVariable ['Tun_bft_disabled_unit', _value, true];";
                         defaultValue = "false";
                         unique = 0;
                         condition = "objectBrain";
                     };
 
-                    class afi_bft_disabled_vehicle: afi_bft_disabled_unit
+                    class Tun_bft_disabled_vehicle: Tun_bft_disabled_unit
                     {
-                        property = "afi_bft_disabled_vehicle";
-                        expression = "_this setVariable ['afi_bft_disabled_unit', _value, true];";
+                        property = "Tun_bft_disabled_vehicle";
+                        expression = "_this setVariable ['Tun_bft_disabled_unit', _value, true];";
                         condition =  "objectHasInventoryCargo + objectVehicle";
                     };
                 };
