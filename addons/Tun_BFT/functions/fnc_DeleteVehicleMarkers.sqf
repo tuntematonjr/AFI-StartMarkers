@@ -14,7 +14,7 @@
  * The return value <BOOL>
  *
  * Example:
- * ["something", player] call afi_bft_fnc_DeleteVehicleMarkers
+ * ["something", player] call Tun_bft_fnc_DeleteVehicleMarkers
  *
  * Public: [Yes/No]
  */

@@ -14,7 +14,7 @@
  * The return value <BOOL>
  *
  * Example:
- * [] call afi_startmarkers_fnc_createVehicleMarkers
+ * [] call Tun_startmarkers_fnc_createVehicleMarkers
  *
  * Public: [Yes/No]
  */

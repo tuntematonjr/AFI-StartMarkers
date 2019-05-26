@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call afi_startmarkers_fnc_createSquadMarkersJIP
+ * [] call Tun_startmarkers_fnc_createSquadMarkersJIP
  *
  * Public: [No]
  */

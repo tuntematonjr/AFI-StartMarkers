@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * []  call afi_startmarkers_fnc_createSquadMarkersBFT
+ * []  call Tun_startmarkers_fnc_createSquadMarkersBFT
  *
  * Public: [No]
  */
@@ -31,7 +31,7 @@ private _groupsToCreateMarkers = [];
 //GVAR(INF_Markers) = [];
 
 
-if (afi_startmarkers_showFriendlyMarkers && {playerSide != civilian}) then {
+if (Tun_startmarkers_showFriendlyMarkers && {playerSide != civilian}) then {
 
 	_groupsToCreateMarkers = allGroups select {[side _x, playerSide] call BIS_fnc_sideIsFriendly && {(side _x != civilian)}  && { ("ItemGPS" in assignedItems leader _x || "ACE_microDAGR" in items leader _x) } && { !((leader _x) getVariable [QGVAR(disabled_unit), false]) } };
 } else {
@@ -46,7 +46,7 @@ if (afi_startmarkers_showFriendlyMarkers && {playerSide != civilian}) then {
 
 	_group = _x;
 	_group_side = side _group;
-	_group_icon = [_group] call afi_startmarkers_fnc_squadIcon;
+	_group_icon = [_group] call Tun_startmarkers_fnc_squadIcon;
 	_position = getPos leader _group;
 	_text = groupId _group;
 	_color = [_group_side,  true] call BIS_fnc_sideColor;

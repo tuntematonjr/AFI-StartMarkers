@@ -14,7 +14,7 @@
  * The return value <BOOL>
  *
  * Example:
- * ["something", player] call afi_startmarkers_fnc_diaryEntry
+ * ["something", player] call Tun_startmarkers_fnc_diaryEntry
  *
  * Public: [No]
  */

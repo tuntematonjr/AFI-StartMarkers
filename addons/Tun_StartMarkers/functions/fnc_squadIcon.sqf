@@ -11,7 +11,7 @@
  * Marker Type <STRING>
  *
  * Example:
- * ["GROUP"] call afi_startmarkers_fnc_squadIcon
+ * ["GROUP"] call Tun_startmarkers_fnc_squadIcon
  *
  * Public: No
  */

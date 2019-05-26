@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * [true] call afi_startmarkers_fnc_diary_VehicleMarkerStatus
+ * [true] call Tun_startmarkers_fnc_diary_VehicleMarkerStatus
  *
  * Public: [Yes/No]
  */

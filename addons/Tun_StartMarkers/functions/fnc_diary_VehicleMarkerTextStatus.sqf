@@ -14,7 +14,7 @@
  * The return value <BOOL>
  *
  * Example:
- * ["something", player] call afi_startmarkers_fnc_diary_VehicleMarkerTextStatus
+ * ["something", player] call Tun_startmarkers_fnc_diary_VehicleMarkerTextStatus
  *
  * Public: [Yes/No]
  */

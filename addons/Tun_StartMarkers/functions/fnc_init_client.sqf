@@ -9,7 +9,7 @@
  * The return value <BOOL>
  *
  * Example:
- * [] call afi_startmarkers_fnc_init_client
+ * [] call Tun_startmarkers_fnc_init_client
  *
  * Public: [No]
  */

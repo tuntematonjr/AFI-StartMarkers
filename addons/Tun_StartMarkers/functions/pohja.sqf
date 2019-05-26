@@ -14,7 +14,7 @@
  * The return value <BOOL>
  *
  * Example:
- * ["something", player] call afi_startmarkers_fnc_imanexample
+ * ["something", player] call Tun_startmarkers_fnc_imanexample
  *
  * Public: [Yes/No]
  */

@@ -14,7 +14,7 @@
  * The return value <BOOL>
  *
  * Example:
- * [] call afi_startmarkers_fnc_squadData
+ * [] call Tun_startmarkers_fnc_squadData
  * Public: [Yes/No]
  */
 #include "script_component.hpp"

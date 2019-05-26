@@ -14,7 +14,7 @@
  * The return value <BOOL>
  *
  * Example:
- * ["something", player] call afi_bft_fnc_init
+ * ["something", player] call Tun_bft_fnc_init
  *
  * Public: [No]
  */
@@ -23,7 +23,7 @@
 
 
 [{
-	if ("ItemGPS" in assignedItems player || "ACE_microDAGR" in items player || player getVariable ["Afi_BFT_Always_On", false]) then {
+	if ("ItemGPS" in assignedItems player || "ACE_microDAGR" in items player || player getVariable ["Tun_BFT_Always_On", false]) then {
 		[] call FUNC(SquadMarkers);
 		[] call FUNC(VehicleMarkers);
 	};

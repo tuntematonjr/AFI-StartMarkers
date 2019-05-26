@@ -8,7 +8,7 @@ GVAR(HQelement) = [];
 
 
 //Do not run this if runing BFT
-if (Afi_BFT_enabled) exitWith { };
+if (Tun_BFT_enabled) exitWith { };
 
 ISNILS(GVAR(disable),false);
 if (GVAR(disable)) exitwith {};
@@ -38,5 +38,5 @@ if (hasInterface) then {
 }] call CBA_fnc_waitUntilAndExecute;
 
 
-[{time > 60*(["afi_safeStart_duration", GVAR(prep_time) ]call BIS_fnc_getParamValue) + 30}, { [false] call FUNC(diary_AllMarkerStatus) }] call CBA_fnc_waitUntilAndExecute;
+[{time > 60*(["Tun_safeStart_duration", GVAR(prep_time) ]call BIS_fnc_getParamValue) + 30}, { [false] call FUNC(diary_AllMarkerStatus) }] call CBA_fnc_waitUntilAndExecute;
 

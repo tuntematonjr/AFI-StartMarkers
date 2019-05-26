@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * []  call afi_bft_VehicleMarkers
+ * []  call tun_bft_VehicleMarkers
  *
  * Public: [No]
  */
@@ -27,18 +27,18 @@ private _vehiclesToCreateMarkers = [];
 //Collect vehicles
 {
     private _vehicle = _x;
-    private _side = _vehicle getVariable ["afi_startmarkers_vehilce_side", sideLogic];
+    private _side = _vehicle getVariable ["Tun_startmarkers_vehilce_side", sideLogic];
 
     ///check that side is defined
-    if ( _side != sideLogic && { !(_vehicle getVariable [QGVAR(afi_bft_disabled_unit), false]) }) then {
+    if ( _side != sideLogic && { !(_vehicle getVariable [QGVAR(Tun_bft_disabled_unit), false]) }) then {
 
         ///Show allied vehicles if needed
-        if (afi_startmarkers_showFriendlyMarkers && {playerSide != civilian}) then {
+        if (Tun_startmarkers_showFriendlyMarkers && {playerSide != civilian}) then {
             if ([_side, playerSide] call BIS_fnc_sideIsFriendly) then {
                _vehiclesToCreateMarkers pushBack _vehicle;
             };
         } else {
-            if (playerSide == _side && { !(_vehicle getVariable [QGVAR(afi_bft_disabled_unit), false]) } ) then {
+            if (playerSide == _side && { !(_vehicle getVariable [QGVAR(Tun_bft_disabled_unit), false]) } ) then {
                 _vehiclesToCreateMarkers pushBack _vehicle;
             };
         };
@@ -53,7 +53,7 @@ private _vehiclesToCreateMarkers = [];
     private _direction = getDir _vehicle;
     private _classname = typeOf _vehicle;
     private _text = str" ";
-    private _side = _vehicle getVariable "afi_startmarkers_vehilce_side";
+    private _side = _vehicle getVariable "Tun_startmarkers_vehilce_side";
     private _color = [_side, false] call BIS_fnc_sideColor;
 
     if (GVAR(vehicle_marker_text_status)) then {

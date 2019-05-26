@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [true]  call afi_startmarkers_fnc_diary_GroupMarkerStatus
+ * [true]  call Tun_startmarkers_fnc_diary_GroupMarkerStatus
  *
  * Public: [No]
  */

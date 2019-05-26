@@ -9,7 +9,7 @@
  * nothing
  *
  * Example:
- * [true] call afi_startmarkers_fnc_diary_AllMarkerStatus
+ * [true] call Tun_startmarkers_fnc_diary_AllMarkerStatus
  *
  * Public: [Yes/No]
  */
