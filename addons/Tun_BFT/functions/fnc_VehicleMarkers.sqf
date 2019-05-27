@@ -58,7 +58,7 @@ private _vehiclesToCreateMarkers = [];
     private _color = [_side, false] call BIS_fnc_sideColor;
 
     if (GVAR(vehicle_marker_text_status)) then {
-        _crewtype = if (GVAR(show_unmanned)) then { " (Unmanned)" } else { " " };
+        _crewtype = if (GVAR(show_unmanned) && { !(_vehicle isKindOf "thing") } ) then { " (Unmanned)" } else { " " };
 
         if ( count crew _vehicle > 0 && { GVAR(show_vehicle_groupid) }) then {
             _crewtype = format [" (%1)", groupId (group (crew _vehicle select 0))];
