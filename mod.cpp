@@ -1,4 +1,4 @@
-name = "TUN Starting Position Markers";
+name = "TUN Starting Position Markers & BFT";
 picture = "Data\afilogo.paa";
 actionName = "Community Website";
 action = "https://armafinland.fi/";

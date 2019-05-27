@@ -52,13 +52,26 @@ private _vehiclesToCreateMarkers = [];
     private _position = getPos _vehicle;
     private _direction = getDir _vehicle;
     private _classname = typeOf _vehicle;
-    private _text = str" ";
+    private _text = str " ";
+    private _showIsAI = if (GVAR(show_ai)) then { " (AI)" } else { " " }; //todo show ai
     private _side = _vehicle getVariable "Tun_startmarkers_vehilce_side";
     private _color = [_side, false] call BIS_fnc_sideColor;
 
     if (GVAR(vehicle_marker_text_status)) then {
-        _text = str (_vehicle getVariable ["displayName", getText (configFile >> "CfgVehicles" >>  typeOf _vehicle >> "displayName")]);
+        _crewtype = if (GVAR(show_unmanned)) then { " (Unmanned)" } else { " " };
+
+        if ( count crew _vehicle > 0 && { GVAR(show_vehicle_groupid) }) then {
+            _crewtype = format [" (%1)", groupId (group (crew _vehicle select 0))];
+        };
+
+        if ( count crew _vehicle > 0 && {count (crew _vehicle select {_x in allPlayers}) == 0} && { GVAR(show_ai) } ) then {
+            _crewtype = " (AI)";
+        };
+
+        _text = str format ["%1%2", (_vehicle getVariable ["displayName", getText (configFile >> "CfgVehicles" >>  typeOf _vehicle >> "displayName")]), _crewtype];
     };
+
+
 
         _IDC = ((findDisplay GVAR(display)) displayCtrl 51) ctrlAddEventHandler ["Draw", format ['
                 (_this select 0) drawIcon [

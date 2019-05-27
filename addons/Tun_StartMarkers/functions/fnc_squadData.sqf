@@ -21,12 +21,14 @@
 
 {
     _group = _x;
-    _group_side = side _group;
+    //_group_side = side _group;
     _group_icon = [_group] call FUNC(squadIcon);
     _position = getPos leader _group;
-    _text = groupId _group;
-    _color = [_group_side,  true] call BIS_fnc_sideColor;
+    //_text = groupId _group;
+    //_color = [_group_side,  true] call BIS_fnc_sideColor;
 
-    _group setVariable [QGVAR(marker_data),[_position, _group_icon], true]
+    _isAiSquad = (GVAR(show_ai) && { count ((units _group) select { _x in _allplayers }) == 0 });
+
+    _group setVariable [QGVAR(marker_data),[_position, _group_icon, _isAiSquad], true]
 
 } forEach allGroups;

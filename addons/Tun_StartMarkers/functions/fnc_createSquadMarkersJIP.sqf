@@ -29,15 +29,22 @@ if (GVAR(showFriendlyMarkers) && {playerSide != civilian}) then {
 {
 	_group = _x;
 	_data = _group getVariable QGVAR(marker_data);
-	_group_side = side _group;
-	_group_icon =  _data select 1;
 	_position = _data select 0;
+	_group_icon =  _data select 1;
+	_isAiSquad = _data select 2;
+
+	_group_side = side _group;
 	_text = groupId _group;
 	_side = side leader _group;
 	_color = [_side,  true] call BIS_fnc_sideColor;
 
 	_marker_name =  format ["%1_%2",QGVAR(inf), _group];
 	GVAR(INF_Markers) pushBack _marker_name;
+
+	//Add Ai tag if no playable slots and system is enabled
+	if ( _isAiSquad ) then {
+		_text = format ["%1 (AI)", _text]
+	};
 
 	_merk = createMarkerLocal [_marker_name, _position];
 	_merk setMarkerShapeLocal "ICON";
