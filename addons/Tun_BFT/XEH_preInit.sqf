@@ -22,7 +22,6 @@ if (hasInterface) then {
     if !(isNil {_vehicle getVariable "Tun_startmarkers_vehilce_side"} || GVAR(add_allunits)) exitWith {};
 
     _vehicle setVariable ["Tun_startmarkers_vehilce_side", side _unit, true];
-    //systemChat "run getin";
 }] call CBA_fnc_addClassEventHandler;
 
 [

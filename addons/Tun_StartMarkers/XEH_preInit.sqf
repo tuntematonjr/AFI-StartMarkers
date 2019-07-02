@@ -3,9 +3,6 @@
 #define PREP(fncName) [QPATHTOF(functions\DOUBLES(fnc,fncName).sqf), QFUNC(fncName)] call CBA_fnc_compileFunction
 
 
-//[] call COMPILE_FILE(merkit_preinit);
-//FUNC(killJIP) = compile preprocessFileLineNumbers "functions\fnc_killJIP.sqf";
-
 PREP(createSquadMarkers);
 PREP(createSquadMarkersJIP);
 PREP(createVehicleMarkers);
