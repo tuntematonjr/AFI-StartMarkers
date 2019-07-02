@@ -19,7 +19,7 @@ if (hasInterface) then {
 
 ["AllVehicles", "GetIn", {
     params ["_vehicle", "_role", "_unit", "_turret"];
-    if !( isNil {_ vehicle getVariable "Tun_startmarkers_vehilce_side" } || GVAR(add_allunits) ) exitWith {};
+    if !( isNil { _vehicle getVariable "Tun_startmarkers_vehilce_side" } || GVAR(add_allunits) ) exitWith {};
 
     _vehicle setVariable ["Tun_startmarkers_vehilce_side", side _unit, true];
 }] call CBA_fnc_addClassEventHandler;
