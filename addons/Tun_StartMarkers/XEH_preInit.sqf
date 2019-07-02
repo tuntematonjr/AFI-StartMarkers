@@ -19,21 +19,6 @@ PREP(diary_GroupMarkerStatus);
 PREP(diary_VehicleMarkerStatus);
 
 
-
-//Set variables base values
-
-GVAR(showFriendlyMarkers) = true;
-GVAR(INF_Markers) = [];
-GVAR(VEHICLE_Markers) = [];
-GVAR(display) = 53;
-GVAR(vehicledata_done) = false;
-GVAR(hold_script) = false;
-GVAR(marker_alpha) = 1;
-
-GVAR(group_marker_status) = true;
-GVAR(vehicle_marker_status) = true;
-GVAR(vehicle_marker_text_status) = true;
-
 //Settings for both addons
 [
     QGVAR(CommandElementID), // Unique setting name. Matches resulting variable name <STRING>
@@ -116,3 +101,17 @@ GVAR(vehicle_marker_text_status) = true;
     true //Setting will be marked as needing mission restart after being changed. (optional, default false) <BOOL>
 ] call CBA_Settings_fnc_init;
 
+
+//Set variables base values
+
+GVAR(showFriendlyMarkers) = true;
+GVAR(INF_Markers) = [];
+GVAR(VEHICLE_Markers) = [];
+GVAR(display) = 53;
+GVAR(vehicledata_done) = false;
+GVAR(hold_script) = false;
+GVAR(marker_alpha) = 1;
+
+GVAR(group_marker_status) = true;
+GVAR(vehicle_marker_status) = true;
+GVAR(vehicle_marker_text_status) = true;
