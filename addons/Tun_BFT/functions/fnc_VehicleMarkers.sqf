@@ -53,7 +53,7 @@ private _vehiclesToCreateMarkers = [];
     private _direction = getDir _vehicle;
     private _classname = typeOf _vehicle;
     private _text = str " ";
-    private _showIsAI = if (GVAR(show_ai)) then { " (AI)" } else { " " }; //todo show ai
+
     private _side = _vehicle getVariable "Tun_startmarkers_vehilce_side";
     private _color = [_side, false] call BIS_fnc_sideColor;
 

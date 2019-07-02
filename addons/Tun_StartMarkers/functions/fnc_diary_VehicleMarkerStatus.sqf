@@ -14,7 +14,7 @@
  * Public: [Yes/No]
  */
 #include "script_component.hpp"
-params ["_status"];
+params [["_status",false]];
 if (str GVAR(vehicle_marker_status) == str _status) exitWith {};
 
 GVAR(vehicle_marker_status) = _status;

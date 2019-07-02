@@ -1,10 +1,8 @@
 #include "script_component.hpp"
 
-if !(GVAR(enabled)) exitWith { };
+if (!(GVAR(enabled) )|| (isServer && isDedicated)) exitWith { };
 
-if (hasInterface) then {
-	[] call FUNC(init);
-};
+[] call FUNC(init);
 
 
 //update display idc

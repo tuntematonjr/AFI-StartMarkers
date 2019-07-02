@@ -14,13 +14,13 @@ class CfgPatches
 };
 
 class Extended_PostInit_EventHandlers {
-    class Tun_Aloitusmerkit {
+    class tun_startmarkers {
         init = QUOTE(call COMPILE_FILE(XEH_postInit));
     };
 };
 
 class Extended_PreInit_EventHandlers {
-    class Tun_Aloitusmerkit {
+    class tun_startmarkers {
         init = QUOTE( call COMPILE_FILE(XEH_preInit) );
     };
 };
