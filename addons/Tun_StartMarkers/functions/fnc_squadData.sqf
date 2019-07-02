@@ -1,21 +1,16 @@
 ﻿/*
  * Author: [Tuntematon]
  * [Description]
- *
+ * Save squad data
  * Arguments:
- * 0: The first argument <STRING>
- * 1: The second argument <OBJECT>
- * 2: Multiple input types <STRING|ARRAY|CODE>
- * 3: Optional input <BOOL> (default: true)
- * 4: Optional input with multiple types <CODE|STRING> (default: {true})
- * 5: Not mandatory input <STRING> (default: nil)
+ * 0: None
  *
  * Return Value:
- * The return value <BOOL>
+ * None
  *
  * Example:
  * [] call Tun_startmarkers_fnc_squadData
- * Public: [Yes/No]
+ * Public: [Yes]
  */
 #include "script_component.hpp"
 

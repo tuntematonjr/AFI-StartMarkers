@@ -6,7 +6,7 @@
  * None
  *
  * Return Value:
- * The return value <BOOL>
+ * None
  *
  * Example:
  * [] call Tun_startmarkers_fnc_init_client

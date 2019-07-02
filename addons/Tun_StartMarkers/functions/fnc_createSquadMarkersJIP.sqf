@@ -54,7 +54,3 @@ if (GVAR(showFriendlyMarkers) && {playerSide != civilian}) then {
 	_merk setMarkerTextLocal _text;
 
 } forEach _groupsToCreateMarkers;
-
-
-
-

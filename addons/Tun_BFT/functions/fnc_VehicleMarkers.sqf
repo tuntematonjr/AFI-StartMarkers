@@ -1,8 +1,7 @@
 ﻿/*
  * Author: [Tuntematon]
  * [Description]
- *
- * Arguments:
+ * Create vehicle markers
  * Arguments:
  * None
  *

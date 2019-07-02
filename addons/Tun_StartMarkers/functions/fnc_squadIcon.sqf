@@ -2,7 +2,7 @@
  * Author: KoffeinFlummi. Modified by Tuntematon
  * Get the apropriate marker for a group.
  * Loaned from ace. https://github.com/acemod/ACE3/blob/master/addons/common/functions/fnc_getMarkerType.sqf
- * all credits for orignal author and ACE team.
+ * all credits for orignal author and ACE team. And i take all responsibility if this is not working.
  *
  * Arguments:
  * 0: Group <GROUP>

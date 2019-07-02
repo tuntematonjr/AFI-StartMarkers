@@ -1,7 +1,7 @@
 ﻿/*
  * Author: [Tuntematon]
  * [Description]
- *
+ * Vehicle markers status update
  * Arguments:
  * 0: status <BOOL>
  *
@@ -11,7 +11,7 @@
  * Example:
  * [true] call Tun_startmarkers_fnc_diary_VehicleMarkerStatus
  *
- * Public: [Yes/No]
+ * Public: [No]
  */
 #include "script_component.hpp"
 params [["_status",false]];

@@ -1,8 +1,7 @@
 ﻿/*
  * Author: [Tuntematon]
  * [Description]
- *
- * Arguments:
+ * Group marker status update
  * Arguments:
  * 0: status <BOOL>
  *

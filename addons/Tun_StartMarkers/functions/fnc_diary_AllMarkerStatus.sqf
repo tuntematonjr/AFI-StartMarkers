@@ -1,7 +1,7 @@
 ﻿/*
  * Author: [Tuntematon]
  * [Description]
- *
+ * Status of showing all markers
  * Arguments:
  * 0: status <BOOL>
  *

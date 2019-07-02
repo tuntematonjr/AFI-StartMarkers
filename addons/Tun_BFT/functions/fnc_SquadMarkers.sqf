@@ -1,8 +1,7 @@
 ﻿/*
  * Author: [Tuntematon]
  * [Description]
- *
- * Arguments:
+ * Create squad markers
  * Arguments:
  * None
  *
