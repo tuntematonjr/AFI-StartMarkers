@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * ["something", player] call Tun_bft_fnc_init
+ * [] call Tun_bft_fnc_init
  *
  * Public: [No]
  */
