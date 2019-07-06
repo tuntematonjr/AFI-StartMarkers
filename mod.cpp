@@ -6,10 +6,10 @@ description = "Create starting position markers for squads, vehicles and other s
 logo = "Data\afilogo.paa";
 logoOver = "Data\afilogo.paa";
 logoSmall = "Data\afilogo.paa";
-tooltip = "ArmaFinland Start pos markers";
-tooltipOwned = "ArmaFinland Start pos markers";
+tooltip = "TUN Start pos markers";
+tooltipOwned = "TUN Start pos markers";
 overview = "Create starting position markers for squads, vehicles and other stuff like ammo boxes for specifig side";
 author = "Tuntematon";
 //overviewPicture = "";
-overviewText = "ArmaFinland Start pos markers";
+overviewText = "TUN Start pos markers";
 //overviewFootnote = "<br /><br /><t color='#999999'>Teksti<t />";
