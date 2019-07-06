@@ -44,7 +44,7 @@ if (Tun_startmarkers_showFriendlyMarkers && {playerSide != civilian}) then {
 //Update BFT markers
 {
 	private _group = _x;
-	if ( vehicle leader _group == leader _group || !(GVAR(show_vehicle_groupid)) || (GVAR(add_allunits))) then {
+	if ( vehicle leader _group == leader _group || !(GVAR(show_vehicle_groupid)) || !(GVAR(add_allunits))) then {
 		_group_side = side _group;
 		_group_icon = [_group] call Tun_startmarkers_fnc_squadIcon;
 		_position = getPos leader _group;
