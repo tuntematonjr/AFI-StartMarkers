@@ -1,8 +1,6 @@
-addons/addons – Pikakuvake.lnk
-addons/Afi_Aloitusmerkit/todo.txt
-addons/Afi_Aloitusmerkit.pbo.bak
-addons/Afi_Aloitusmerkit.pbo
-keys/AFI_StartPos.bikey
 *.pbo
 *.bak
 *.lnk
+*.bikey
+*.txt
+*.md
