@@ -22,9 +22,9 @@ private _groupsToCreateMarkers = [];
 private _allplayers = [switchableUnits, playableUnits] select isMultiplayer;
 
 if (GVAR(showFriendlyMarkers) && {playerSide != civilian}) then {
-	_groupsToCreateMarkers = allGroups select {[side _x, playerSide] call BIS_fnc_sideIsFriendly && { (side _x != civilian) } && {_x getVariable [QGVAR(enable_marker), true]} };
+	_groupsToCreateMarkers = allGroups select {[side _x, playerSide] call BIS_fnc_sideIsFriendly && { (side _x != civilian) } && {_x getVariable [QGVAR(enable_marker), true]} && {_x getVariable ["AFI_Aloitusmerkit_Ryhmamerkki", true]} };
 } else {
-	_groupsToCreateMarkers = allGroups select {side _x == playerSide && {_x getVariable [QGVAR(enable_marker), true]} };
+	_groupsToCreateMarkers = allGroups select { side _x == playerSide && {_x getVariable [QGVAR(enable_marker), true]} && {_x getVariable ["AFI_Aloitusmerkit_Ryhmamerkki", true]} };
 };
 
 {

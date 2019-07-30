@@ -24,10 +24,10 @@
 	_direction = getDir _vehicle;
 	_vehicle setVariable [QGVAR(marker_data), [_position,_direction], true];
 
-	if !(_vehicle getVariable ["Tun_vehicle_gear",""] == "") then {
+	if !(_vehicle getVariable ["afi_vehicle_gear",""] == "") then {
 		///check that is importat type
 		if (_vehicle isKindof "LandVehicle" || _vehicle isKindOf "Static" || _vehicle isKindOf "thing" || _vehicle isKindof "Air" || _vehicle isKindOf "Ship" ) then {
-		    _sideSTR = _vehicle getVariable "Tun_vehicle_gear";
+		    _sideSTR = _vehicle getVariable "afi_vehicle_gear";
 		    switch (toLower _sideSTR) do {
 		        case "west": {
 		        	_vehicle setVariable [QGVAR(vehilce_side), west, true];

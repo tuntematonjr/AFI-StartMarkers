@@ -1,9 +1,0 @@
-muuttujat ajoneuvon sidelle
-ukkojen atribuutteihin piilotus
-
-
-
-dokumentoi
-
-
-hold_script
