@@ -48,7 +48,7 @@ class Cfg3DEN
                         tooltip = "Enables startpos marker and BFT for this unit";
                         property = "Tun_startmarkers_enable_marker_inf";
                         control = "Checkbox";
-                        expression = "_this setVariable ['Tun_startmarkers_enable_marker', _value, true];";
+                        expression = "(group _this) setVariable ['Tun_startmarkers_enable_marker', _value, true];";
                         defaultValue = "true";
                         unique = 0;
                         condition = "objectBrain";
