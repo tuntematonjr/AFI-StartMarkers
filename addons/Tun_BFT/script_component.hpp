@@ -1,16 +1,16 @@
 #define COMPONENT bft
 #define PREFIX tun
 
-#define MAJOR 1
-#define MINOR 0
+#define MAJOR 0
+#define MINOR 4
 #define PATCHLVL 0
-#define BUILD 19122017
+#define BUILD 13092019
 
 #define VERSION MAJOR.MINOR.PATCHLVL.BUILD
 #define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD
 
 // MINIMAL required version for the Mod. Components can specify others..
-#define REQUIRED_VERSION 1.56
+#define REQUIRED_VERSION 1.94
 
 /*
 	#define DEBUG_ENABLED_SYS_MAIN

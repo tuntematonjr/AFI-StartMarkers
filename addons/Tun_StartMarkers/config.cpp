@@ -6,7 +6,7 @@ class CfgPatches
     {
         units[] = {};
         weapons[] = {};
-        requiredVersion = 1.5;
+        requiredVersion = 1.94;
         requiredAddons[] = {"cba_main"};
         author[] = {"Tuntematon"};
         authorUrl = "https://armafinland.fi/";
