@@ -19,7 +19,7 @@
     _leader = leader _x;
     //_group_side = side _group;
     _group_icon = [_group] call FUNC(squadIcon);
-    _position = getPos leader _group;
+    _position = getPos _leader;
     //_text = groupId _group;
     //_color = [_group_side,  true] call BIS_fnc_sideColor;
 

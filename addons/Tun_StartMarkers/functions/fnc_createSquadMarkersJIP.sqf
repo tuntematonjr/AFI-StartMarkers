@@ -21,14 +21,14 @@ private _groupsToCreateMarkers = [];
 
 
 if (GVAR(showFriendlyMarkers) && {playerSide != civilian}) then {
-	_groupsToCreateMarkers = allGroups select {[side _x, playerSide] call BIS_fnc_sideIsFriendly && {(side _x != civilian)} && { count ( leader _x getVariable QGVAR(marker_data)) > 0} && { leader _x getVariable [QGVAR(enable_marker), true] } && { leader _x getVariable ["AFI_Aloitusmerkit_Ryhmamerkki", true]}  };
+	_groupsToCreateMarkers = allGroups select {[side _x, playerSide] call BIS_fnc_sideIsFriendly && {(side _x != civilian)} && { count ( (leader _x) getVariable QGVAR(marker_data)) > 0} && { (leader _x) getVariable [QGVAR(enable_marker), true] } && { (leader _x) getVariable ["AFI_Aloitusmerkit_Ryhmamerkki", true]}  };
 } else {
-	_groupsToCreateMarkers = allGroups select { side _x == playerSide && { count (_x getVariable QGVAR(marker_data)) > 0} && { _x getVariable [QGVAR(enable_marker), true] } && { leader _x getVariable ["AFI_Aloitusmerkit_Ryhmamerkki", true]}  };
+	_groupsToCreateMarkers = allGroups select { side _x == playerSide && { count ( (leader _x) getVariable QGVAR(marker_data)) > 0} && { _x getVariable [QGVAR(enable_marker), true] } && { (leader _x) getVariable ["AFI_Aloitusmerkit_Ryhmamerkki", true]}  };
 };
 
 {
 	_group = _x;
-	_data = _group getVariable QGVAR(marker_data);
+	_data = (leader _group) getVariable QGVAR(marker_data);
 	_position = _data select 0;
 	_group_icon =  _data select 1;
 	_isAiSquad = _data select 2;
