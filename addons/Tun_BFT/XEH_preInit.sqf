@@ -90,3 +90,4 @@ if (hasInterface) then {
     true //Setting will be marked as needing mission restart after being changed. (optional, default false) <BOOL>
 ] call CBA_Settings_fnc_init;
 
+

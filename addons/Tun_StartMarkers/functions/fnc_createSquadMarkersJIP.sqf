@@ -21,9 +21,9 @@ private _groupsToCreateMarkers = [];
 
 
 if (GVAR(showFriendlyMarkers) && {playerSide != civilian}) then {
-	_groupsToCreateMarkers = allGroups select {[side _x, playerSide] call BIS_fnc_sideIsFriendly && {(side _x != civilian)} && {count (_x getVariable QGVAR(marker_data)) > 0} && { _x getVariable [QGVAR(enable_marker), true] } && {_x getVariable ["AFI_Aloitusmerkit_Ryhmamerkki", true]}  };
+	_groupsToCreateMarkers = allGroups select {[side _x, playerSide] call BIS_fnc_sideIsFriendly && {(side _x != civilian)} && { count ( leader _x getVariable QGVAR(marker_data)) > 0} && { leader _x getVariable [QGVAR(enable_marker), true] } && { leader _x getVariable ["AFI_Aloitusmerkit_Ryhmamerkki", true]}  };
 } else {
-	_groupsToCreateMarkers = allGroups select { side _x == playerSide && { count (_x getVariable QGVAR(marker_data)) > 0} && { _x getVariable [QGVAR(enable_marker), true] } && {_x getVariable ["AFI_Aloitusmerkit_Ryhmamerkki", true]}  };
+	_groupsToCreateMarkers = allGroups select { side _x == playerSide && { count (_x getVariable QGVAR(marker_data)) > 0} && { _x getVariable [QGVAR(enable_marker), true] } && { leader _x getVariable ["AFI_Aloitusmerkit_Ryhmamerkki", true]}  };
 };
 
 {

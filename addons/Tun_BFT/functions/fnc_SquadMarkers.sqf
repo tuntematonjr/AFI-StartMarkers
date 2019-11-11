@@ -33,10 +33,10 @@ private _allplayers = [switchableUnits, playableUnits] select isMultiplayer;
 
 if (Tun_startmarkers_showFriendlyMarkers && {playerSide != civilian}) then {
 
-	_groupsToCreateMarkers = allGroups select {[side _x, playerSide] call BIS_fnc_sideIsFriendly && {(side _x != civilian)}  && { ("ItemGPS" in assignedItems leader _x || "ACE_microDAGR" in items leader _x) } && { !((leader _x) getVariable [QGVAR(disabled_unit), false]) } && {_x getVariable ["AFI_Aloitusmerkit_Ryhmamerkki", true]}  };
+	_groupsToCreateMarkers = allGroups select { [side _x, playerSide] call BIS_fnc_sideIsFriendly && { (side _x != civilian) }  && { ("ItemGPS" in assignedItems leader _x || "ACE_microDAGR" in items leader _x) } && { !((leader _x) getVariable [QGVAR(disabled_unit), false]) } && { leader _x getVariable ["AFI_Aloitusmerkit_Ryhmamerkki", true] } };
 } else {
 
-	_groupsToCreateMarkers = allGroups select { side _x == playerSide  && { ("ItemGPS" in assignedItems leader _x || "ACE_microDAGR" in items leader _x) } && { !((leader _x) getVariable [QGVAR(disabled_unit), false]) } && {_x getVariable ["AFI_Aloitusmerkit_Ryhmamerkki", true]}  };
+	_groupsToCreateMarkers = allGroups select { side _x == playerSide  && { ("ItemGPS" in assignedItems leader _x || "ACE_microDAGR" in items leader _x) } && { !((leader _x) getVariable [QGVAR(disabled_unit), false]) } && { leader _x getVariable ["AFI_Aloitusmerkit_Ryhmamerkki", true] } };
 };
 
 

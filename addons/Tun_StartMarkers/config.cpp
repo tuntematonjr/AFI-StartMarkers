@@ -48,7 +48,7 @@ class Cfg3DEN
                         tooltip = "Enables startpos marker and BFT for this unit";
                         property = "Tun_startmarkers_enable_marker_inf";
                         control = "Checkbox";
-                        expression = "(group _this) setVariable ['Tun_startmarkers_enable_marker', _value, true];";
+                        expression = "(leader _this) setVariable ['Tun_startmarkers_enable_marker', _value, true];";
                         defaultValue = "true";
                         unique = 0;
                         condition = "objectBrain";
@@ -61,13 +61,14 @@ class Cfg3DEN
                         condition =  "objectHasInventoryCargo + objectVehicle";
                     };
 
+
                     class Tun_startmarkers_startPosName: Tun_startmarkers_enable_marker_inf
                     {
                         displayName = "Custon vehicle text";
                         tooltip = "You can change the default startpos marker name shown at brieffing to a different one. Names shorter than 2 characters wont be set.";
                         property = "Tun_startmarkers_startPosName";
                         control = "EditShort";
-                        expression = "if (count _value > 1) then{_this setVariable['displayName', str _value,true]};";
+                        expression = "if (count _value > 1) then { _this setVariable ['displayName', str _value,true]};";
                         defaultValue = "''";
                         condition = "objectHasInventoryCargo + objectVehicle";
                     };

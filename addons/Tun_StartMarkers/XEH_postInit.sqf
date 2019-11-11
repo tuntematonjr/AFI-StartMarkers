@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 //Make sure all important variables are defined
-[{ !isNil QGVAR(CommandElementID) && !isNil QGVAR(disable) && !isNil QGVAR(display) && !isNil "Tun_BFT_enabled" },{
+[{ !isNil QGVAR(CommandElementID) && !isNil QGVAR(diary_info_text) && !isNil QGVAR(diary_language_text) && !isNil QGVAR(showFriendlyMarkers) && !isNil QGVAR(disable) && !isNil QGVAR(prep_time) && !isNil QGVAR(show_ai) && !isNil "Tun_BFT_enabled" },{
 
 
     _untrimmed = GVAR(CommandElementID) splitString ",";
@@ -13,13 +13,11 @@
     //Do not run this if runing BFT
     if (Tun_BFT_enabled) exitWith { };
 
-
     if (GVAR(disable)) exitwith {};
 
     if (isServer) then {
     	[] call FUNC(init_server);
     };
-
 
     //Only client stuff
     if (hasInterface) then {
